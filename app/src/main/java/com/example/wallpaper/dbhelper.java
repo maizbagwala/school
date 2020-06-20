@@ -136,21 +136,21 @@ public class dbhelper extends SQLiteOpenHelper {
 //            Log.d("mmm", "getAllUsers: " + cu.getString(1));
 //            Log.d("mmm", "getAllUsers: " + cu.getString(2));
         }
-        if (cu != null && cu.getCount() > 0) {
-            for (int i = 0; i < cu.getCount(); i++) {
-                try {
-                    s[i] = new Student(cu.getString(1), cu.getString(2),cu.getString(3),cu.getString(4),cu.getString(5),cu.getString(6),cu.getString(7));
-                    cu.moveToPosition(i + 1);
-//                    Log.d("mmm", "getAllUsers: " + s[0].getName());
-//                    Log.d("mmm", "getAllUsers: " + s[0].getPhone());
-//                    Log.d("mmm", "getAllUsers:2 " + s[1].getName());
-//                    Log.d("mmm", "getAllUsers:2 " + s[1].getPhone());
-                } catch (NullPointerException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }
+//        if (cu != null && cu.getCount() > 0) {
+//            for (int i = 0; i < cu.getCount(); i++) {
+//                try {
+//                    s[i] = new Student(cu.getString(1), cu.getString(2),cu.getString(3),cu.getString(4),cu.getString(5),cu.getString(6),cu.getString(7));
+//                    cu.moveToPosition(i + 1);
+////                    Log.d("mmm", "getAllUsers: " + s[0].getName());
+////                    Log.d("mmm", "getAllUsers: " + s[0].getPhone());
+////                    Log.d("mmm", "getAllUsers:2 " + s[1].getName());
+////                    Log.d("mmm", "getAllUsers:2 " + s[1].getPhone());
+//                } catch (NullPointerException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//        }
         db.close();
         return s;
     }

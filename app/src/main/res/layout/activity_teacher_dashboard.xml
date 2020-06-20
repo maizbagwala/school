@@ -4,54 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminDashboard">
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/tcv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="4dp"
-        app:cardElevation="10dp">
-
+    tools:context=".TeacherDashboardActivity">
         <RelativeLayout
-            android:id="@+id/top_profile"
+            android:id="@+id/top_profile_teacher"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:background="@drawable/headerbg"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/image_admin"
+                android:id="@+id/image_teacher"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="50dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/maiz"
-                android:tint="#FFFFFF"
                 app:civ_border_color="@color/white"
-                app:civ_border_width="2dp" />
+                app:civ_border_width="2dp"
+                android:src="@drawable/maiz"
+                android:tint="#FFFFFF" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/image_admin"
-                android:layout_marginLeft="77dp"
-                android:layout_marginTop="5dp"
-                android:text="ADMIN"
+                android:layout_below="@+id/image_teacher"
+                android:layout_alignStart="@+id/image_teacher"
+                android:layout_alignLeft="@+id/image_teacher"
+                android:layout_alignEnd="@+id/image_teacher"
+                android:layout_alignRight="@+id/image_teacher"
+                android:text="TEACHER"
+                android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
 
             <LinearLayout
-                android:id="@+id/ll"
-                android:layout_width="wrap_content"
+                android:id="@+id/ll_teacher"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@id/image_admin"
+                android:layout_toRightOf="@id/image_teacher"
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvname_teacher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Maiz bagwala"
@@ -89,27 +86,27 @@
 
             </LinearLayout>
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/items"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottomcontainer"
-        android:layout_below="@id/tcv"
+        android:layout_above="@+id/bottomcontainer_teacher"
+        android:layout_below="@id/top_profile_teacher"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="0dp">
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_add_teacher_admin"
+            android:id="@+id/card_add_student_teacher"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="5dp"
             android:elevation="4dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="6dp"
-            app:layout_constraintEnd_toStartOf="@+id/card_add_event_admin"
+            app:layout_constraintEnd_toStartOf="@+id/card_add_notice_teacher"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -128,22 +125,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="add teacher" />
+                    android:text="add Student" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_add_event_admin"
+            android:id="@+id/card_add_notice_teacher"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="5dp"
             android:elevation="4dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="6dp"
-            app:layout_constraintEnd_toStartOf="@+id/card_show_teacher_admin"
-            app:layout_constraintStart_toEndOf="@+id/card_add_teacher_admin"
+            app:layout_constraintEnd_toStartOf="@+id/card_show_student_teacher"
+            app:layout_constraintStart_toEndOf="@+id/card_add_student_teacher"
             app:layout_constraintTop_toTopOf="parent">
 
             <RelativeLayout
@@ -162,13 +159,13 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/i2"
                     android:layout_centerHorizontal="true"
-                    android:text="add Event" />
+                    android:text="add notice" />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_show_teacher_admin"
+            android:id="@+id/card_show_student_teacher"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="5dp"
@@ -176,7 +173,7 @@
             app:cardCornerRadius="20dp"
             app:cardElevation="6dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/card_add_event_admin"
+            app:layout_constraintStart_toEndOf="@+id/card_add_notice_teacher"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
@@ -194,7 +191,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="show teacher" />
+                    android:text="show student" />
 
             </LinearLayout>
 
@@ -209,8 +206,8 @@
             android:elevation="4dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="6dp"
-            app:layout_constraintStart_toStartOf="@+id/card_add_teacher_admin"
-            app:layout_constraintTop_toBottomOf="@id/card_add_teacher_admin">
+            app:layout_constraintStart_toStartOf="@+id/card_add_student_teacher"
+            app:layout_constraintTop_toBottomOf="@id/card_add_student_teacher">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -240,7 +237,7 @@
             android:elevation="4dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="6dp"
-            app:layout_constraintEnd_toEndOf="@+id/card_add_event_admin"
+            app:layout_constraintEnd_toEndOf="@+id/card_add_notice_teacher"
             app:layout_constraintTop_toTopOf="@+id/cardView">
 
             <LinearLayout
@@ -270,7 +267,7 @@
             android:elevation="4dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="6dp"
-            app:layout_constraintEnd_toEndOf="@+id/card_show_teacher_admin"
+            app:layout_constraintEnd_toEndOf="@+id/card_show_student_teacher"
             app:layout_constraintTop_toTopOf="@+id/cardView2">
 
             <LinearLayout
@@ -295,27 +292,25 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/bottomcontainer"
+        android:id="@+id/bottomcontainer_teacher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
 
         <RelativeLayout
-            android:id="@+id/bottomAppBar"
+            android:id="@+id/bottomAppBar_teacher"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:background="@drawable/headerbg">
 
             <ImageView
-                android:id="@+id/navbtn_admin"
+                android:id="@+id/navbtn_teacher"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:src="@drawable/ic_menu" />
         </RelativeLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
 </RelativeLayout>

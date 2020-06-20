@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".showStudent">
+    tools:context=".ShowTeacherActivity">
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_showStudent"
+        android:id="@+id/rv_showTeacher"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"/>
 
     <RelativeLayout
-        android:id="@+id/rl_nothing"
+        android:id="@+id/rl_teacher"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:layout_height="match_parent">
         <ImageView
-            android:id="@+id/iv_showStudent"
+            android:id="@+id/iv_showTeacher"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:alpha="0.2"
@@ -31,9 +31,8 @@
             android:textSize="24sp"
             android:alpha=".5"
             android:layout_marginBottom="20dp"
-            android:layout_above="@id/iv_showStudent"
+            android:layout_above="@id/iv_showTeacher"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

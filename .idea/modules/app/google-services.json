@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "159865579701",
+    "firebase_url": "https://smart-school-fe3f8.firebaseio.com",
+    "project_id": "smart-school-fe3f8",
+    "storage_bucket": "smart-school-fe3f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159865579701:android:fe36225c6d9012927ab6fc",
+        "android_client_info": {
+          "package_name": "com.example.wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159865579701-735aep8e6uadioe8jre27rjsonrm396v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wallpaper",
+            "certificate_hash": "727c9063fcdfa5ba37dde40d8badfce3207d13e3"
+          }
+        },
+        {
+          "client_id": "159865579701-2mverbsev8envktp40gdftinc3fte9m0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX3qSvKlZPMy0YDLuL3FtPxuAtsW9uK2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159865579701-2mverbsev8envktp40gdftinc3fte9m0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

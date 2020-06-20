@@ -1,47 +1,40 @@
 package com.example.wallpaper;
 
-public class Student {
-    private String id;
-    private String fname;
-    private String lname;
-    private String rollno;
-    private String address;
-    private String email;
-    private String password;
-    private String phone;
-    private String dob;
-    private String role;
+public class Teacher {
+    String id;
+    String fname;
+    String lname;
+    String address;
+    String email;
+    String pwd;
+    String phone;
+    String dob;
+    String role;
+    String imageurl;
 
-    public Student() {
+    public Teacher() {
     }
 
-    public Student(String id, String fname, String lname, String rollno, String address, String email,String password, String phone, String dob, String role) {
+    public Teacher(String id, String fname, String lname, String address, String email, String pwd, String phone, String dob, String role,String imageurl) {
+
         this.id = id;
         this.fname = fname;
         this.lname = lname;
-        this.rollno = rollno;
         this.address = address;
         this.email = email;
-        this.password=password;
+        this.pwd = pwd;
         this.phone = phone;
         this.dob = dob;
         this.role = role;
+        this.imageurl=imageurl;
     }
 
-    public String getPassword() {
-        return password;
+    public String getImageurl() {
+        return imageurl;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
 
     public String getId() {
@@ -68,14 +61,6 @@ public class Student {
         this.lname = lname;
     }
 
-    public String getRollno() {
-        return rollno;
-    }
-
-    public void setRollno(String rollno) {
-        this.rollno = rollno;
-    }
-
     public String getAddress() {
         return address;
     }
@@ -92,6 +77,14 @@ public class Student {
         this.email = email;
     }
 
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -106,5 +99,13 @@ public class Student {
 
     public void setDob(String dob) {
         this.dob = dob;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class myadapter extends RecyclerView.Adapter<myadapter.myViewHolder> {
     private Student[] students;
@@ -42,32 +45,63 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myViewHolder> {
         holder.tvaddress.setText("add: " + students[position].getAddress());
         Log.d("mmm", "onBindViewHolder: " + students[position].getAddress());
 
-        holder.cv.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(context, holder.cv);
-                popupMenu.inflate(R.menu.option_menu);
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
 
-                        switch (item.getItemId()) {
-                            case R.id.update_btn_rec:
-                                Toast.makeText(context, "update btn clicked", Toast.LENGTH_SHORT).show();
-                                break;
-                            case R.id.delete_btn_rec:
-                                Toast.makeText(context, "delete btn clicked", Toast.LENGTH_SHORT).show();
-                                break;
-                            default:
-                                break;
-                        }
-                        return false;
-                    }
-                });
-                popupMenu.show();
-                return false;
-            }
-        });
+//        holder.cv.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                final BottomSheetDialogFragment bottomSheetDialog = new BottomSheetDialog();
+//                View bottomSheet = ((ShowTeacherActivity) context).getLayoutInflater().inflate(R.layout.bottom_sheet_layout_admin, null);
+//                bottomSheet.findViewById(R.id.ll_show).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(context, "show clicked", Toast.LENGTH_SHORT).show();
+//                        bottomSheetDialog.dismiss();
+//                    }
+//                });
+//                bottomSheet.findViewById(R.id.ll_update).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(context, "update clicked", Toast.LENGTH_SHORT).show();
+//                        bottomSheetDialog.dismiss();
+//                    }
+//                });
+//                bottomSheet.findViewById(R.id.ll_delete).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(context, "delete clicked", Toast.LENGTH_SHORT).show();
+//                        bottomSheetDialog.dismiss();
+//                    }
+//                });
+//                bottomSheetDialog.show(((ShowTeacherActivity) context).getSupportFragmentManager(), bottomSheetDialog.getTag());
+//            }
+//        });
+
+//        holder.cv.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                PopupMenu popupMenu = new PopupMenu(context, holder.cv);
+//                popupMenu.inflate(R.menu.option_menu);
+//                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+//                    @Override
+//                    public boolean onMenuItemClick(MenuItem item) {
+//
+//                        switch (item.getItemId()) {
+//                            case R.id.update_btn_rec:
+//                                Toast.makeText(context, "update btn clicked", Toast.LENGTH_SHORT).show();
+//                                break;
+//                            case R.id.delete_btn_rec:
+//                                Toast.makeText(context, "delete btn clicked", Toast.LENGTH_SHORT).show();
+//                                break;
+//                            default:
+//                                break;
+//                        }
+//                        return false;
+//                    }
+//                });
+//                popupMenu.show();
+//                return false;
+//            }
+//        });
     }
 
     @Override

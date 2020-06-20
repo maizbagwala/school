@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:id="@+id/view_btn_rec" android:title="VIEW"/>
     <item android:id="@+id/update_btn_rec" android:title="UPDATE"/>
     <item android:id="@+id/delete_btn_rec" android:title="DELETE"/>
 
